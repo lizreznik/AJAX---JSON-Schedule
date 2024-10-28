@@ -1,4 +1,4 @@
-//* JSON File Link: https://api.npoint.io/63a88c84843d6c783c74 *//
+// JSON File Link: https://api.npoint.io/63a88c84843d6c783c74 //
 const scheduleContainer = $('#scheduleList');
 const btn = $('#submitDay');
 
@@ -22,20 +22,29 @@ btn.on('click', function () {
             method: 'GET',
             success: function (data) {
 
-                renderHTML(data)
                 const schedule = data.schedule
                 const daySchedule = schedule.filter(item => item.days.includes(selectedDay))
+                $("#scheduleList").clear()
+                renderHTML(data)
             }
         })
 
     }
 })
 
-
+//filter the data to show only the classes that meet on the letter day entered // 
 function renderHTML(data) {
-    let htmlString = ''
-    const aDayClasses = getClassesForDay('A');
-    console.log(aDayClasses);
+    var htmlString = ''
+    daySchedule.forEach(function (classItem) {
+        htmlString.append(`
+            <tr>
+                <td>${classItem.period}</td>
+                <td>${classItem.time}</td> 
+                <td>${classItem.class}</td>
+                <td>${classItem.teacher}</td>
+                <td>${classItem.room}</td>
+                }`)
+    });
 
 
     scheduleContainer.append(htmlString)

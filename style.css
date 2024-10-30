@@ -1,0 +1,33 @@
+body {
+    background-color: #fbfbf2;
+}
+
+.btn {
+    /* add margin top */
+}
+
+h1 {
+    padding: 25px;
+    font-family: "blockhead-black-face", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 45px;
+}
+
+.table {
+    border-style: double;
+    border-width: 5px;
+    border-color: #3b28cc;
+
+}
+
+h3 {
+    padding: 5px;
+
+}
+
+#scheduleList {
+    font-family: "dico-code-one", mono;
+    font-weight: 400;
+    font-style: normal;
+}

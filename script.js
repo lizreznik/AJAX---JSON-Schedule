@@ -48,7 +48,7 @@ $(document).ready(function () {
                     <tr>
                     <td>${classItem.period}</td>
                     <td>${classItem.class}</td>
-                    <td>${classItem.teacher}</td>
+                    <td class="name" >${classItem.teacher}</td>
                     <td>${classItem.room}</td>
                    </tr> `)
 
